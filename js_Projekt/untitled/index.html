@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+<body id="body">
+<div id="gameName">
+    <h1 id="katakombaName">Katakomba</h1>
+</div>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+<!-- Hany jatekos legyen a jatekban -->
+<div id="playerNumberId">
+    <label style="color: whitesmoke" for="playerNumber">Hany jatekossal szeretned jatszani a jatekot?:</label>
+
+    <select name="playerNumber" id="playerNumber">
+        <option value="1">Egy</option>
+        <option value="2">Ketto</option>
+        <option value="3">Harom</option>
+        <option value="4">Negy</option>
+    </select>
+    <label style="color: whitesmoke" for="playerNumber">Jatekosonkent mennyi kincs legyen?:</label>
+    <input type="number" min="1" max="10" value="2" id="kincsSzam">
+    <button id="submitButton" onclick="kezdes()">Elkuld</button>
+</div>
+
+<div>
+    <button id="leirasMutatasGomb" onclick="showGameRules()">Jatekleiras mutatasa</button>
+</div>
+
+<! Jatek -->
+<!-- Jatek leirasa -->
+
+<div id=Kepek" style="display:none">
+    <img id="jobbranyil"
+         src="kepek/jobbranyil.png"
+         width="61" height="61" alt="valami">
+    <img id="balranyil"
+         src="kepek/balranyil.png"
+         width="61" height="61" alt="valami">
+    <img id="lefelenyil"
+         src="kepek/lefelenyil.png"
+         width="61" height="61" alt="valami">
+    <img id="felfelenyil"
+         src="kepek/felfelenyil.png"
+         width="61" height="61" alt="valami">
+    <img id="jobbraKatt"
+         src="kepek/jobbranyilKatt.png"
+         width="61" height="61" alt="valami">
+    <img id="balraKatt"
+         src="kepek/balranyilKatt.png"
+         width="61" height="61" alt="valami">
+    <img id="felKatt"
+         src="kepek/felfelenyilKatt.png"
+         width="61" height="61" alt="valami">
+    <img id="leKatt"
+         src="kepek/lefelenyilKatt.png"
+         width="61" height="61" alt="valami">
+    <img id="kanyar"
+         src="kepek/utak/kanyarok/kanyar_0.png"
+         width="61" height="61" alt="valami">
+    <img id="egyenes"
+         src="kepek/utak/egyenesek/egyenes_0.png"
+         width="61" height="61" alt="valami">
+    <img id="elagazas"
+         src="kepek/utak/elagazasok/elagazas_0.png"
+         width="61" height="61" alt="valami">
+</div>
+
+<!-- Jatek Tabla-->
+<div id="kezdes">
+    <label style="color: whitesmoke" id="currentPlayer">Ez a jatekos jatszik:</label>
+    <p></p>
+    <label style="color: whitesmoke"> Kattints ide ha befejezted a lepesedet!</label>
+    <button onclick="valtas()">Kesz</button>
+    <p></p>
+    <h1 class="gameName">Kimaradt kep:</h1>
+    <canvas id="betoltendoKep" width="61" height="61" style="border:1px solid #000000"></canvas>
+    <canvas id="myCanvas" width="549" height="549" style="border:1px solid #000000">
+
+    </canvas>
+    <canvas style="border:1px solid #000000" id="playerCanvas" width="549" height="549">
+
+    </canvas>
+</div>
+
+<div id="gameRules">
+    <h2>Varázslatos katakomba</h2>
+    <p>Nekeresdországban Nevenincs királynak egyik szeme sír, a másik nevet. Nevet, mert tündérszép lányának kérője akadt, és sír, mert a kiváló kérőből nem egy, hanem több is van. Hát most hogyan döntse el, melyiknek adja lánya kezét és fele királyságát? Gondolja kikéri udvari tanácsosa, Furfang véleményét. Az udvari tanácsos nevéhez illő ötlettel áll elő: állítsák próba elé a kérőket, s aki a legrátermettebbnek bizonyul, az nyerje el a szépséges királylány kezét. Van a várnak egy elvarázsolt katakombája, ahol a szobák helye folyamatosan változtatható. Ebben rejtenek el kincseket, s az a kérő nyeri el a királylány kezét, aki a leghamarabb szedi össze a rábízott kincseket.</p>
+    <h2>Jatek leirasa</h2>
+    <p>A katakomba szobáit egy 7x7-es négyzetrács cellái jelképezik. Minden szobában adott, hogy hány falán van ajtó. Ha két szomszédos szoba érintkező falán egy-egy ajtó van, akkor át lehet menni egyik szobából a másikba. A négyzetrács páros sorait és oszlopait el lehet tolni, a többi szoba végig rögzített a játék során. Az eltolásokkal az ajtókon keresztül utak nyílnak a szobák között, így lehet eljutni a kincsekhez. Mindegyik kérő arra törekszik, hogy a katakomba szobáinak ötletes eltolásával eljusson a kincsekhez. Aki elsőként találja meg mindahányat és kiindulópontjára sikeresen visszaérkezik az a nyertes.</p>
+</div>
+
+
+
+<script src="front.js"></script>
+</body>
+</html>

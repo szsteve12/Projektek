@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "AIwnwZB+cEmqlI6dssV0HT1saeYL4Xq5CN5O7FWGhFnRbbrbQOjOdTXo9PNpmMGgyUNv0xfB0DM7GUi68O3dWg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Szucsányi István\\Desktop\\New folder\\Masodik\\MasodikBead\\MasodikBead.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Szucsányi István\\.nuget\\packages\\mstest.testframework\\2.1.1\\mstest.testframework.2.1.1.nupkg.sha512"
+  ],
+  "logs": []
+}
